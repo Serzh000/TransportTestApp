@@ -1,6 +1,6 @@
 Инструкция по сборке:
 
-Запустить RunWinBuild.cmd для Windows или RunLinuxBuild.sh для Linux
-Проект соберется в папку build
-Перейти в директорию build/bin
-Запустить исполняемый файл через командную строку. Пример: 'VehiclePrinterProject.exe 0 1 2 3'
+1. Запустить RunWinBuild.cmd для Windows или RunLinuxBuild.sh для Linux
+2. Проект соберется в папку build
+3. Перейти в директорию build/bin
+4. Запустить исполняемый файл через командную строку. Пример: 'VehiclePrinterProject.exe 0 1 2 3'
