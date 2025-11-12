@@ -1,8 +1,8 @@
 #pragma once
-
 #include <string>
 #include <iostream>
 
+// Базовый класс реализации транспортного средства
 class Vehicle
 {
 public:
@@ -18,6 +18,7 @@ public:
 	int GetWheelsCount() const { return _wheelsCount; }
 	int GetMaxSpeed() const { return _maxSpeed; }
 
+	// Печать информации о транспортном средстве
 	virtual void PrintInfo() const;
 
 private:

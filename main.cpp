@@ -17,6 +17,7 @@ int main(int argc, char* argv[])
     SetConsoleCP(CP_UTF8);
 #endif
 
+    // Если запустили без параметров, выводим ошибку
     if (argc < 2) {
         std::cerr << "ОШИБКА: НЕ УКАЗАНЫ ПАРАМЕТРЫ!\n";
         return 1;
@@ -24,6 +25,7 @@ int main(int argc, char* argv[])
 
     std::vector<std::unique_ptr<Vehicle>> vehicles;
 
+    // Читаем параметры
     for (int i = 1; i < argc; ++i) {
         std::stringstream ss(argv[i]);
         int transportType;
@@ -38,7 +40,8 @@ int main(int argc, char* argv[])
         vehicles.emplace_back(VehicleFactory::CreateVehicle(transportType));
     }
 
-    for (auto& transport : vehicles) {
+    // Выводим информацию
+    for (const auto& transport : vehicles) {
         if (!transport) {
             std::cerr << "НЕИЗВЕСТНЫЙ ТИП ТРАНСПОРТА\n\n";
             continue;
